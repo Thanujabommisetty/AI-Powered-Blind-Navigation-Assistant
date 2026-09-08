@@ -1,0 +1,508 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8f5;
+    color: #1f2933;
+    line-height: 1.6;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    background: #12372a;
+    color: white;
+
+    padding: 18px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    margin-left: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #a7f3c5;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8f5e9,
+            #d7f0df,
+            #ffffff
+        );
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero-icon {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #12372a;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #455a64;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* ================= BUTTON ================= */
+
+.btn {
+    display: inline-block;
+
+    border: none;
+    cursor: pointer;
+
+    margin: 15px 6px 0;
+
+    padding: 13px 23px;
+
+    background: #198754;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #146c43;
+
+    transform: translateY(-2px);
+}
+
+.btn.stop {
+    background: #dc3545;
+}
+
+.btn.stop:hover {
+    background: #bb2d3b;
+}
+
+.btn.voice {
+    background: #6f42c1;
+}
+
+.btn.voice:hover {
+    background: #59339d;
+}
+
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 70px 7%;
+
+    text-align: center;
+}
+
+section h2 {
+    font-size: 34px;
+
+    color: #12372a;
+
+    margin-bottom: 35px;
+}
+
+
+/* ================= CARDS ================= */
+
+.services {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.card {
+    background: white;
+
+    padding: 30px 22px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card-icon {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #198754;
+
+    margin-bottom: 12px;
+
+    font-size: 21px;
+}
+
+
+/* ================= NAVIGATION BOX ================= */
+
+.navigation-box {
+    max-width: 900px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.1);
+}
+
+
+/* ================= CAMERA ================= */
+
+.camera-container {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 760px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background: #111;
+}
+
+#camera {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+}
+
+#canvas {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+}
+
+
+/* ================= STATUS ================= */
+
+.status-box {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: #f1f8f4;
+
+    border-radius: 12px;
+
+    border: 1px solid #d7eade;
+}
+
+.status-title {
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: #198754;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 5px;
+}
+
+#status {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #12372a;
+}
+
+
+/* ================= DIRECTION PANEL ================= */
+
+.direction-panel {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 20px;
+
+    margin: 25px auto;
+
+    padding: 18px;
+
+    max-width: 650px;
+
+    background: #eef7f1;
+
+    border-radius: 18px;
+
+    border: 2px solid #d7eade;
+}
+
+.direction-item {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 15px 10px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    border: 2px solid transparent;
+
+    box-shadow:
+        0 4px 12px
+        rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.direction-item span {
+    font-size: 42px;
+
+    display: inline-block;
+
+    opacity: 0.35;
+
+    transition:
+        transform 0.3s,
+        opacity 0.3s;
+}
+
+.direction-item strong {
+    font-size: 14px;
+
+    color: #12372a;
+}
+
+
+/* ACTIVE DIRECTION */
+
+.direction-item.active {
+    border-color: #198754;
+
+    background: #e8f5e9;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 6px 18px
+        rgba(25, 135, 84, 0.25);
+}
+
+.direction-item.active span {
+    opacity: 1;
+
+    transform: scale(1.35);
+}
+
+
+/* ================= CONTROLS ================= */
+
+.controls {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 5px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #12372a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+.footer-small {
+    margin-top: 5px;
+
+    font-size: 13px;
+
+    opacity: 0.8;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero-icon {
+        font-size: 50px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .navigation-box {
+        padding: 15px;
+    }
+
+    .direction-panel {
+        gap: 8px;
+
+        padding: 10px;
+    }
+
+    .direction-item {
+        padding: 12px 5px;
+    }
+
+    .direction-item span {
+        font-size: 32px;
+    }
+
+    .direction-item strong {
+        font-size: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 7px 0;
+    }
+}

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI-Powered Blind Navigation Assistant</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+    <!-- COCO-SSD AI Model -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            👁️ NavAI
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#navigation">Navigation</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="hero-icon">
+                    🤖
+                </div>
+
+                <h1>
+                    AI-Powered Blind Navigation Assistant
+                </h1>
+
+                <p>
+                    A smart AI system that uses a camera
+                    to detect objects and provides voice
+                    guidance for safer navigation.
+                </p>
+
+                <a href="#navigation" class="btn">
+                    🚀 Start Navigation
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about">
+
+            <h2>
+                How It Works
+            </h2>
+
+            <div class="services">
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        📷
+                    </div>
+
+                    <h3>
+                        Camera
+                    </h3>
+
+                    <p>
+                        The camera observes the surroundings
+                        in front of the user.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🤖
+                    </div>
+
+                    <h3>
+                        AI Detection
+                    </h3>
+
+                    <p>
+                        AI identifies objects and obstacles
+                        using computer vision.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🧭
+                    </div>
+
+                    <h3>
+                        Direction Guidance
+                    </h3>
+
+                    <p>
+                        The system provides left, right
+                        and forward guidance.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">
+                        🔊
+                    </div>
+
+                    <h3>
+                        Voice Assistance
+                    </h3>
+
+                    <p>
+                        Important navigation instructions
+                        are provided through voice.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <section id="navigation">
+
+            <h2>
+                Navigation Assistant
+            </h2>
+
+            <div class="navigation-box">
+
+                <!-- CAMERA -->
+
+                <div class="camera-container">
+
+                    <video
+                        id="camera"
+                        autoplay
+                        playsinline>
+                    </video>
+
+                    <canvas id="canvas"></canvas>
+
+                </div>
+
+
+                <!-- STATUS -->
+
+                <div class="status-box">
+
+                    <div class="status-title">
+                        SYSTEM STATUS
+                    </div>
+
+                    <p id="status">
+                        Loading AI model...
+                    </p>
+
+                </div>
+
+
+                <!-- DIRECTION -->
+
+                <div class="direction-panel">
+
+                    <div
+                        class="direction-item"
+                        id="leftBox">
+
+                        <span id="leftIndicator">
+                            ⬅️
+                        </span>
+
+                        <strong>
+                            LEFT
+                        </strong>
+
+                    </div>
+
+
+                    <div
+                        class="direction-item"
+                        id="aheadBox">
+
+                        <span id="aheadIndicator">
+                            ⬆️
+                        </span>
+
+                        <strong>
+                            AHEAD
+                        </strong>
+
+                    </div>
+
+
+                    <div
+                        class="direction-item"
+                        id="rightBox">
+
+                        <span id="rightIndicator">
+                            ➡️
+                        </span>
+
+                        <strong>
+                            RIGHT
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTROL BUTTONS -->
+
+                <div class="controls">
+
+                    <button
+                        id="startCamera"
+                        class="btn">
+                        📷 Start Camera
+                    </button>
+
+
+                    <button
+                        id="stopCamera"
+                        class="btn stop">
+                        🛑 Stop Camera
+                    </button>
+
+
+                    <button
+                        id="voiceBtn"
+                        class="btn">
+                        🔊 Test Voice
+                    </button>
+
+
+                    <button
+                        id="voiceToggle"
+                        class="btn voice">
+                        🔊 Voice ON
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            AI-Powered Blind Navigation Assistant © 2026
+        </p>
+
+        <p class="footer-small">
+            AI • Computer Vision • Voice Assistance
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
